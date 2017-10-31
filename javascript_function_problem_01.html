@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+
+var A = [90,80,50,40,10];
+var B = [90,30,100,50,50];
+var C = [20,30,60,50,20];
+
+function scoreA(a)
+{
+	sumA = 0;
+	tA1 = 0;
+	tA2 = 0;
+	maxA = A[0];
+	minA = A[0];
+	avgA = 0;
+	for(iA=0; iA<5; iA++)
+	{
+		sumA = sumA + A[iA];
+		if(A[iA]>maxA) maxA = A[iA];
+		else tA1 = A[iA];
+		if(A[iA]<minA) minA = A[iA];
+		else tA2 = A[iA];
+	}
+	avgA = sumA / 5;
+	return [avgA, maxA, minA];
+} 
+	scoreA();
+
+function scoreB(b)
+{
+	sumB = 0;
+	tB1 = 0;
+	tB2 = 0;
+	maxB = B[0];
+	minB = B[0];
+	avgB = 0;
+	for(iB=0; iB<5; iB++)
+	{
+		sumB = sumB + B[iB];
+		if(B[iB]>maxB) maxB = B[iB];
+		else tB1 = B[iB];
+		if(B[iB]<minB) minB = B[iB];
+		else tB2 = B[iB];
+	}
+	avgB = sumB / 5;
+	return [avgB, maxB, minB];
+	
+}
+	scoreB();
+
+function scoreC(c)
+{
+	sumC = 0;
+	tC1 = 0;
+	tC2 = 0;
+	maxC = C[0];
+	minC = C[0];
+	avgC = 0;
+	for(iC=0; iC<5; iC++)
+	{
+		sumC = sumC + C[iC];
+		if(C[iC]>maxC) maxC = C[iC];
+		else tC1 = C[iC];
+		if(C[iC]<minC) minC = C[iC];
+		else tC2 = C[iC];
+	}
+	avgC = sumC / 5;
+	return [avgC, maxC, minC];
+	
+}
+	scoreC();
+	console.log('A 학생의 평균 점수는 ' + avgA + ', 최고 점수는 ' + maxA + ', 최하 점수는' + minA + ' 입니다.');
+	console.log('B 학생의 평균 점수는 ' + avgB + ', 최고 점수는 ' + maxB + ', 최하 점수는' + minB + ' 입니다.'); 
+	console.log('C 학생의 평균 점수는 ' + avgC + ', 최고 점수는 ' + maxC + ', 최하 점수는' + minC + ' 입니다.'); 
+</script>
+</head>
+<body>
+</body>
+</html>

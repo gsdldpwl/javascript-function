@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+
+var m = [10, 1, 9];
+var e = [8, 2, 5];
+var s = [18, 3, 14];
+var i = 0;
+var j = 0;
+function mid(a){
+	midA = "";
+	midB = "";
+	midC = "";
+	for(i=0; i<3; i++)
+	{
+		for(j=0; j<m[i]; j++)
+		{
+			if(i==0) midA += "*";
+			else if(i==1) midB += "*";
+			else if(i==2) midC += "*";
+		}
+		for(j=0; j<10-m[i]; j++)
+		{
+			if(i==0) midA += "_";
+			else if(i==1) midB += "_";
+			else if(i==2) midC += "_";
+		}
+	}
+	return [midA, midB, midC];
+}
+mid();
+
+function end(b){
+	endA = "";
+	endB = "";
+	endC = "";
+	for(i=0; i<3; i++)
+	{
+		for(j=0; j<e[i]; j++)
+		{
+			if(i==0) endA += "*";
+			else if(i==1) endB += "*";
+			else if(i==2) endC += "*";
+		}
+		for(j=0; j<10-e[i]; j++)
+		{
+			if(i==0) endA += "_";
+			else if(i==1) endB += "_";
+			else if(i==2) endC += "_";
+		}
+	}
+	return [endA, endB, endC];
+}
+end();
+
+function sum(c){
+	sumA = "";
+	sumB = "";
+	sumC = "";
+	for(i=0; i<3; i++)
+	{
+		for(j=0; j<s[i]; j++)
+		{
+			if(i==0) sumA += "*";
+			else if(i==1) sumB += "*";
+			else if(i==2)sumC += "*";
+		}
+		for(j=0; j<20-s[i]; j++)
+		{
+			if(i==0) sumA += "_";
+			else if(i==1) sumB += "_";
+			else if(i==2) sumC += "_";
+		}
+	}
+	return [sumA, sumB, sumC];
+}
+sum();
+
+console.log("A : " + midA + " + " + endA + " = " + sumA);
+console.log("B : " + midB + " + " + endB + " = " + sumB);
+console.log("C : " + midC + " + " + endC + " = " + sumC);
+
+</script>
+</head>
+<body>
+</body>
+</html>
