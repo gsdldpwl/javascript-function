@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+	function print_scores_chart() {
+	var max = Math.max.apply(null,arguments);
+	var min = Math.min.apply(null,arguments);
+	var score = "-";
+	for(var a = 0; a < arguments.length; a++)
+	{
+		score += "--";
+	}
+	score += "\n";
+	for(var i=10; i>0; i--)
+	{
+		var floor = i;
+		for(var j=0; j<arguments.length; j++)
+		{
+			if(arguments[j]>=i) score += " *";
+			else score += "  ";
+		}
+		if(floor==max) score +=" <- max";
+		if(floor==min) score +=" <- min";
+		score += "\n";
+	}
+	for(var a = 0; a < arguments.length; a++)
+	{
+		score += "--";
+	}
+	if(min==0) score += "<- min";
+	console.log(score);
+}
+	print_scores_chart(1,2,3,4,5);
+  	print_scores_chart(10, 1, 10, 1, 5, 5);
+     	print_scores_chart(5, 2, 0, 9, 3, 5, 9);
+</script>
+</head>
+<body>
+</body>
+</html>
